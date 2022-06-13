@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedFarma.co | cotiza y ahorra en salud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+
+<body>
+
+    <header>
+
+        <!--Header Top  -->
+        <div class="header__top">
+            <div>
+                <select class="select">
+                    <option>Colombia</option>
+                    <option>Bogotá D.C</option>
+                    <option>Medellín</option>
+                    <option>Cali</option>
+                </select>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=573002769134" target="_blank"><i
+                    class='bx bxl-whatsapp header__top__style'></i></a>
+            <p class="header__top__style ">Domicilios 300 2769434</p>
+
+        </div>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid justify-content-between">
+
+                <!--Header Left  -->
+
+                <div class="d-flex">
+
+                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="./index.html">
+                        <img src="./img/logo.png" height="100" alt="RedFarma" loading="lazy" style="margin-top: 2px;" />
+                    </a>
+
+
+                    <form class="input-group w-auto my-auto d-sm-flex">
+                        <input id="buscador" type="text" class="form-control rounded navbar-input"
+                            placeholder="Buscar" style="min-width: 50px;"/>
+                        <span class="input-group-text border-0 d-lg-flex nav__icon nav-item"><i
+                                class='bx bx-search-alt-2 ' id="btn"></i></span>
+                    </form>
+                </div>
+
+                <!--Header center-->
+
+                <div class="d-flex nav__menu-main">
+
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class='bx bx-menu menu-icon'></i>
+                    </label>
+
+                    <ul class="navbar-nav flex-row d-sm-flex nav__menu">
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="">Cotización</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="">Servicios</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="">Tiendas</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="">Ordenes</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+                <!--Header right-->
+                <ul class="navbar-nav flex-row d-sm-flex align-items-center">
+                    <li class="nav-item me-3 me-lg-1 ">
+
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-cart-add nav__icon1'></i>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item me-3 me-lg-1 ">
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-user-circle nav__icon1'></i>
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="text-center cotizacion__titulo">
+            <h1>Los mejores resultados obtenidos en tu búsqueda los encuentras a continuación:</h1>
+        </div>
+
+
+        <div class="row main__cotizacion" >
+
+            <div class="col-2 main__cotizacion__producto ">
+
+                <div class=" mt-5 main__cotizacion__detalle">
+                    
+                    <div data-aos="fade-up" id="resultado1">
+
+                    </div>
+                    <div class="card-body" id="resultado2">
+                        
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="col-8 mt-5">
+                <table class="table table-striped ">
+                    <tr class= "table__formato">
+                      <th>Droguerias</th>
+                      <th>Precio</th>
+                      <th>Stock</th>
+                    </tr>
+                </table>
+                <div id="resultado">
+                    
+                </div>
+                
+            </div>
+            <div class="col-2 mt-5" >
+                <div>
+                    <button id="btn1" class="main__btn text-decoration-none">Añadir</button>
+                    <button id="btn2" class="main__btn text-decoration-none">Añadir</button>
+                    <button id="btn3" class="main__btn text-decoration-none">Añadir</button>
+                </div>
+                
+            </div>
+            <div class="text-center formato-pedido"><h3>Orden de Pedido</h3></div>
+            <div id="seleccion">
+                
+            </div>
+            <div>
+                <button id="btn4" class="main__btn text-decoration-none">Modalidad de pago</button>
+            </div>
+        </div>
+
+        
+    </main>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+  <script src="./js/clases/drogueria.class.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/data/data.js"></script>
+  <script src="./js/eventos/eventos.js"></script>
+</body>
+
+</html>
