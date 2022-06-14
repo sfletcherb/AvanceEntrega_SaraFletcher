@@ -53,13 +53,13 @@ const hoy = new Date();
 
 let respuesta1 = () => {
 
-    let pedido = opcion[0]?.domicilio === ""? opcion[0].precio : opcion[0].precio + opcion[0].domicilio;
+    let pedido = opcion[0]?.domicilio === "" ? opcion[0].precio : opcion[0].precio + opcion[0].domicilio;
 
     div3.innerHTML =
 
         `
         <div>
-        <p class="text-end">Fecha: ${hoy.getMonth()+1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
+        <p class="text-end">Fecha: ${hoy.getMonth() + 1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
         <p>Has seleccionado la mejor opción de precio disponible de tu producto. El detalle de tu pedido es:</p>
     
         Tienda: ${opcion[0].store} <br/>
@@ -71,19 +71,19 @@ let respuesta1 = () => {
         
         Gracias por preferirnos!
         </div>`
-    
-    
+
+
 };
 
 let respuesta2 = () => {
 
-    let pedido = opcion[1]?.domicilio === ""? opcion[1].precio : opcion[1].precio + opcion[1].domicilio;
-    
+    let pedido = opcion[1]?.domicilio === "" ? opcion[1].precio : opcion[1].precio + opcion[1].domicilio;
+
     div3.innerHTML =
 
         `
         <div>
-        <p class="text-end">Fecha: ${hoy.getMonth()+1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
+        <p class="text-end">Fecha: ${hoy.getMonth() + 1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
         <p>Has seleccionado la 2da mejor opción de precio disponible de tu producto. El detalle de tu pedido es:</p>
     
         Tienda: ${opcion[1].store} <br/>
@@ -101,13 +101,13 @@ let respuesta2 = () => {
 
 let respuesta3 = () => {
 
-    let pedido = opcion[2]?.domicilio === ""? opcion[2].precio : opcion[2].precio + opcion[2].domicilio;
-    
+    let pedido = opcion[2]?.domicilio === "" ? opcion[2].precio : opcion[2].precio + opcion[2].domicilio;
+
     div3.innerHTML =
 
         `
         <div>
-        <p class="text-end">Fecha: ${hoy.getMonth()+1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
+        <p class="text-end">Fecha: ${hoy.getMonth() + 1}/${hoy.getDate()}/${hoy.getFullYear()} </p>
         <p>Has seleccionado la 3ra mejor opción de precio disponible de tu producto. El detalle de tu pedido es:</p>
     
         Tienda: ${opcion[2].store} <br/>
@@ -119,18 +119,38 @@ let respuesta3 = () => {
         
         Gracias por preferirnos!
         </div>`
+
+
+};
+
+
+let domicilio = () => {
+
+    Swal.fire({
+        title: 'Metodo de pago',
+        text: 'Selecciona la opción de pago más cómoda para ti:',
+        confirmButtonText: 'Efectivo Contra entrega',
+        cancelButtonText: 'Transferencia',
+        showCancelButton: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                icon: 'success',
+                text: 'Has confirmado que tu pago será en efectivo.'
+                
+            })
+            
+        } else {
+            Swal.fire({
+                icon: 'info',
+                text: 'En un momento serás redireccionado al botón de pago PSE'
+                
+            })
+        }
+
+    })
+
     
     
 };
 
-
-let domicilio = () =>{
-
-
-    let calculo = Number(prompt(`Seleccione la opción según la modalidad de pago deseada:
-                         1. Contra entrega.
-                         2. Transferencia`));
-
-    let decision = calculo === 1 ? `Confirmas que tu pago será en efectivo.`: "En un momento serás redireccionado al botón de pago PSE";
-    alert(decision);
-}

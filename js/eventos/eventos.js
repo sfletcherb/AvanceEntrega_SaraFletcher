@@ -25,6 +25,6 @@ boton3.addEventListener("click", () => {
 
 const boton4 = document.getElementById("btn4");
 boton4.addEventListener("click", () => {
-    domicilio();
+   domicilio();
 })
 
