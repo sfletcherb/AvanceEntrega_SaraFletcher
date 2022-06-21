@@ -5,10 +5,8 @@ const div1 = document.getElementById("resultado1");
 const div2 = document.getElementById("resultado2");
 const div3= document.getElementById("seleccion");
 
-const boton = document.getElementById("btn");
-boton.addEventListener("click", () => {
-    buscador();
-})
+const search = document.getElementById('buscador')
+search.addEventListener('input', ()=> searchInput(search.value));
 
 const boton1 = document.getElementById("btn1");
 boton1.addEventListener("click", () => {
