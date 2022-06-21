@@ -1,7 +1,7 @@
 
 
 const searchInput = async searchText =>{
-    const res = await fetch('http://localhost:3000/listaOferta');
+    const res = await fetch('./db.json');
     const listado = await res.json(); 
     buscador(listado);
 }
