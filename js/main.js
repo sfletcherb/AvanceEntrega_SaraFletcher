@@ -3,14 +3,14 @@
 const searchInput = async searchText =>{
     const res = await fetch('./db.json');
     const listado = await res.json(); 
-    buscador(listado);
+    buscador(listaOferta);
 }
 
 
 
-let buscador = (listado) => {
+let buscador = (listaOferta) => {
 
-    let buscar = listado.filter((medicamento) => medicamento.producto?.indexOf(input.value) !== -1)
+    let buscar = listaOferta.filter((medicamento) => medicamento.producto?.indexOf(input.value) !== -1)
 
     if(listado === ""){
         buscar = []
